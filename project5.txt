@@ -1,0 +1,61 @@
+                                   Project5
+
+
+RUN LEVEL
+
+
+1- what is a run level?
+	A run level is the preset state in which a Linux system operates.
+
+2- What is the default runlevel?
+	The default runlevel in linux is the level in which the OS boots.
+
+3- What is the advantage of having different run levels?
+
+
+4- What commands would you type to check the system's runlevel?
+	# who -r or runlevel	
+
+5- what is the difference between run level 3 and runlevel 5 in linux?
+
+
+6- why do you think companies prefer runlevel 3?
+	To avoid unnecessairy programs running on, save more space in the
+	memory.	
+ 
+7- what is the difference between runlevel 1 and runlevel 2?
+	Run level 1 is a single (root) user mode (maintenance) and Run level 2
+	is a multi users maintenance mode.
+
+8- what is the difference between the present runlevel and the default runlevel?
+
+ 
+9- how do you check the default runlevel on your system?
+	You have to display the content of the file /etc/inittab.
+
+10- where does the system checks for the default runlevel during boot up?
+	The system is checking in the file /etc/inittab, at the last line  
+	(id:5:unitdefault runlevel. Run level 5) during the boot up.
+
+11- a client complains that the system is booting up but is staying in maintenance mode 
+12- what can be the problem?
+	The default run level is probably set up on run level 2.
+
+13- How can you fix this problem?
+	You have to access the file /etc/inittab and modify the default run level on 3 or 5.
+
+14- consider you are on run level 5 , how do you change your system temporaly to runlevel 3?
+	You have to type the command# vi /etc/inittab, on id:5:unitdefault runlevel, you replace 
+	5 with 3 and save the file. 
+
+BOOT UP PROCESS
+
+1- walk me thru the boot up process in linux.
+2- what file does the grub check for instructions?
+3- what file does the kernel checks to mount all the file system?
+	
+
+4- What file does the init program checks for the default run level?
+	/etc/initab
+
+6- Boot one of your server to maintenance mode and change the root password to week2hot
